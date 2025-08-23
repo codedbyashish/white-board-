@@ -26,5 +26,34 @@
 .tool-row h5{
     margin-bottom: 10px;
     color: white;
+    font-weight: 400;
+    font-size: 19px;
+    letter-spacing: 0.6px;
 
+
+}
+.tool-row button{
+    padding: 12px 0px;
+    border-radius:25px ;
+    font-size: 18px;
+    color: #788eff;
+    cursor: pointer;
+
+}
+input[type="range"]{
+    height: 40px;
+
+}
+input[type="color"]{
+    appearance:none;
+    width: 80px;
+   height: 40px;
+   border: 2px ;
+   border-radius: 5%;
+   background-color: transparent;
+   cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch{
+    border-radius: 8px;
+    border: 3px solid black ;
 }
