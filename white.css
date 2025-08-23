@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#paintarea{
+    position: relative;
+    border: 8px solid #788eff;
+    height: 70vh;
+    width:100%;
+    
+}
