@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>white board web </title>
-    <link rel="stylesheet" href=white.css">
+    <link rel="stylesheet" href="white.css">
 </head>
 <body>
     <div id="paintarea">
@@ -15,9 +15,21 @@
             <div class="tool-row">
                 <div class="toolwraper">
                     <h5><span id="tool-type"></span> Size: </h5>
-                    <input type="range" id="pen-slidearea">
+                    <input type="range" id="pen-slidearea" value="4">
                 </div>
+                <div class="tools-wrapper">
+                    <h5>Color:</h5>
+                    <input type="color" id="color">
+                </div>
+                <div class="tools-wrapper"> <h5> Background Color:</h5></div>
+                <input type="range" id="color-background">
+                
             </div>
+        </div>
+        <div class="tool-row">
+            <button id="button-clear">Clear</button>
+            <button id="button-pen">Pen</button>
+            <button id="button-erase">Erase</button>
         </div>
     </div>
     

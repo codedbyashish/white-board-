@@ -8,5 +8,23 @@
     border: 8px solid #788eff;
     height: 70vh;
     width:100%;
-    
+
+}
+.options{
+    height:30vh ;
+    background-color: #788eff;
+    padding: 30px;
+
+}
+.tool-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+
+}
+.tool-row h5{
+    margin-bottom: 10px;
+    color: white;
+
 }
