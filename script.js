@@ -26,5 +26,16 @@ let rectLeft=canvas.getBoundingClientRect().left;
 
 let rectTOP=canvas.getBoundingClientRect().top;
 
+// intial feautres 
+const init =()=>{
+context.strokeStyle="black"
+context.lineWidth=1;
+canvas.style.width=  "100%" 
+canvas.style.height="100%"
+canvas.width=canvas.offsetWidth;
+
+}
+
+
 
 
