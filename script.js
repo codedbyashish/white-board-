@@ -14,5 +14,17 @@ let tooltype=document.getElementById("tool-type")
 let ease_boolean=false
 let draw_boolean=false
 
-// canavs
+// canavs work
+let context=canvas.getContext("2d")
+
+//  intialy mouse  x=0, y=0 cordiantes afteer the real time cordition
+let mouseX=0;
+let mouseY=0;
+
+//  make the break user canoot go outside canvas 
+let rectLeft=canvas.getBoundingClientRect().left;
+
+let rectTOP=canvas.getBoundingClientRect().top;
+
+
 
