@@ -11,7 +11,7 @@ let pensize=document.getElementById("pen-slidearea")
 let tooltype=document.getElementById("tool-type")
 
 // when using not using both  earse or drwing 
-let ease_boolean=false
+let erase_boolean=false
 let draw_boolean=false
 
 // canavs work
@@ -59,6 +59,11 @@ const getXy=(e)=>{
     mouseX=(!touch() ? e.pageX : e.touch?.[0].pageX)-rectLeft;
     mouseY=(!touch() ? e.pageY : e.touch?.[0] .pageY)-rectTOP
 }
+const stopDrawing=()=>{
+    context.beginPath();
+    draw_boolean=false
+
+}
 // drwing working 
 
 const stratdrawing=(e)=>{
@@ -74,6 +79,20 @@ canvas.addEventListener("mouseup",stopDrawing);
 canvas.addEventListener("touchend",stopDrawing)
 
 // mouse is stoped clicked 
+
+canvas.addEventListener("mouseLevae",stratdrawing)
+
+// button pen for mode 
+button-pen.addEventListener("click",()=>{
+    tooltype.innerHTML="Pen"
+    erase_boolean=false
+
+})
+// button fo erasr mode
+button-erase.addEventListener("click",()=>{
+erase_boolean=true;
+tooltype.innerHTML="Eraser"
+}) 
 
 
 
