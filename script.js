@@ -41,6 +41,25 @@ backgroundbutton.value="#ffffff";
 buttonPen.innerText = context.strokeStyle;
 
 }
+//  detect the touch device 
+const touch= ()=>{
+    try{
+        //  create the touch event 
+     document.createEvent("TouchEvent");
+     return true
+    }
+    catch(e){
+        return false
+    }
+}
+
+// tracking the mouse activity x y coridnates 
+
+const getXy=(e)=>{
+    mouseX=(!touch() ? e.pageX : e.touch?.[0].pageX)-rectLeft;
+    mouseY=(!touch() ? e.pageY : e.touch?.[0] .pageY)-rectTOP
+}
+
 
 
 window.onload=init();
