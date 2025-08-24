@@ -33,9 +33,17 @@ context.lineWidth=1;
 canvas.style.width=  "100%" 
 canvas.style.height="100%"
 canvas.width=canvas.offsetWidth;
+canvas.height=canvas.offsetHeight;
+// range of pen tittle 
+tooltype.innerHTML=" Pen"
+canvas.style.backgroundColor="#ffff"
+backgroundbutton.value="#ffffff";
+buttonPen.innerText = context.strokeStyle;
 
 }
 
+
+window.onload=init();
 
 
 
