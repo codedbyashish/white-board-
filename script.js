@@ -59,6 +59,22 @@ const getXy=(e)=>{
     mouseX=(!touch() ? e.pageX : e.touch?.[0].pageX)-rectLeft;
     mouseY=(!touch() ? e.pageY : e.touch?.[0] .pageY)-rectTOP
 }
+// drwing working 
+
+const stratdrawing=(e)=>{
+    draw_boolean=true
+    getXy(e);
+    context.beginPath();
+    context.moveTo(mouseX,mouseY);
+}
+
+// mouse when click works the pen only after stop begon new patch 
+
+canvas.addEventListener("mouseup",stopDrawing);
+canvas.addEventListener("touchend",stopDrawing)
+
+// mouse is stoped clicked 
+
 
 
 
