@@ -15,14 +15,14 @@
 
 #paintarea{
     position: relative;
-    border: 8px solid #788eff;
+    border: 8px solid #1a1a40;
     height: 70vh;
     width:100%;
 
 }
 .options{
     height:30vh ;
-    background-color: #788eff;
+    background-color: #1a1a40;
     padding: 30px;
 
 }
