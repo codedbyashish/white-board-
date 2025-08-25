@@ -15,6 +15,20 @@ fontSelect.addEventListener("change", () => {
 });
 let textMode = false;
 
+document.getElementById("button-text").addEventListener("click", () => {
+    textMode = true;
+    tooltype.innerHTML = "Text";
+});
+
+canvas.addEventListener("click", (e) => {
+    if (textMode) {
+        let text = prompt("Enter your text:");
+        if (text) {
+            context.fillText(text, e.offsetX, e.offsetY);
+        }
+    }
+});
+
 // when using not using both  earse or drwing 
 let erase_boolean=false
 let draw_boolean=false
