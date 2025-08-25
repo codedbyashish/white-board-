@@ -8,6 +8,12 @@ let erasebutton=document.getElementById("button-erase")
 let pen=document.getElementById("button-pen")
 let pensize=document.getElementById("pen-slidearea")
 let tooltype=document.getElementById("tool-type")
+let fontSelect = document.getElementById("font-select");
+
+fontSelect.addEventListener("change", () => {
+    context.font = `${pensize.value}px ${fontSelect.value}`;
+});
+let textMode = false;
 
 // when using not using both  earse or drwing 
 let erase_boolean=false
