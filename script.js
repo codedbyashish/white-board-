@@ -114,6 +114,15 @@ clearbutton.addEventListener("click", () => {
     context.clearRect(0, 0, canvas.width, canvas.height);
     canvas.style.backgroundColor = backgroundbutton.value;
 });
+let darkModeBtn = document.getElementById("toggle-darkmode");
+
+darkModeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    darkModeBtn.textContent = document.body.classList.contains("dark") 
+        ? " Light Mode" 
+        : "🌙 Dark Mode";
+});
+
 
 
 
