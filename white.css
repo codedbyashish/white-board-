@@ -6,6 +6,10 @@
 * {
     transition: all 0.2s ease;
 }
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 
 #paint {
     width: 100%;

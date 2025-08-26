@@ -110,6 +110,11 @@ erasebutton.addEventListener("click", ()=>{
     erase_boolean=true
     tooltype.innerHTML="Eraser"
 })
+clearbutton.addEventListener("click", () => {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.style.backgroundColor = backgroundbutton.value;
+});
+
 
 
 
