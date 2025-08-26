@@ -46,6 +46,11 @@ body {
 
 
 }
+body.dark {
+    background: #121212;
+    color: #e0e0e0;
+}
+
 .tool-row button {
      width: 200px;   
     height: 45px;   

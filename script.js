@@ -118,7 +118,6 @@ clearbutton.addEventListener("click", () => {
 
 
 
-
 window.onload = init;
 
 
