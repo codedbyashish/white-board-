@@ -1,4 +1,5 @@
 // initial refernence
+// all event picked
 let canvas = document.getElementById("paint");
 let colorsRef=document.getElementsByClassName("colors")
 let backgroundbutton=document.getElementById("color-background")
@@ -114,6 +115,8 @@ clearbutton.addEventListener("click", () => {
     context.clearRect(0, 0, canvas.width, canvas.height);
     canvas.style.backgroundColor = backgroundbutton.value;
 });
+
+// toggle button working  
 let darkModeBtn = document.getElementById("toggle-darkmode");
 
 darkModeBtn.addEventListener("click", () => {
