@@ -10,7 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-
+/* canvas  */
 #paint {
     width: 100%;
     height: 100%;
@@ -50,7 +50,7 @@ body.dark {
     background: #121212;
     color: #e0e0e0;
 }
-
+/* butoon styling */
 .tool-row button {
      width: 200px;   
     height: 45px;   
