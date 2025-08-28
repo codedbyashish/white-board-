@@ -119,10 +119,10 @@ let darkModeBtn = document.getElementById("toggle-darkmode");
 darkModeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
     darkModeBtn.textContent = document.body.classList.contains("dark") 
-        ? " Light Mode" 
+        ? " 💡Light Mode" 
         : "🌙 Dark Mode";
 });
-// Load preference on start
+
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
   toggleBtn.textContent = "Light Mode";
