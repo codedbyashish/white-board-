@@ -92,7 +92,7 @@ input[type="color"]::-moz-color-swatch {
     border-radius: 8px;
     border: 3px solid black;
 }
-
+/* font selest */
 #font-select {
     width: 180px;
     padding: 10px;
@@ -104,7 +104,7 @@ input[type="color"]::-moz-color-swatch {
     color: #333;
     transition: all 0.3s ease;
 }
-
+/* toogle button styling */
 #toggle-darkmode {
   position: absolute;
   top: 15px;
