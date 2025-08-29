@@ -163,6 +163,12 @@ document.getElementById("button-redo").addEventListener("click", () => {
     let canvas = document.getElementById("paint");
     let ctx = canvas.getContext("2d");
     let restore = redoStack.pop();
+    if (restore) {
+      undoStack.push(restore);
+      ctx.putImageData(restore, 0, 0);
+    }
+  }
+});
 
 
 
