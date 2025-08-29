@@ -145,6 +145,16 @@ function saveState() {
   let ctx = canvas.getContext("2d");
   undoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
 }
+// function for undo button
+document.getElementById("button-undo").addEventListener("click", () => {
+  if (undoStack.length > 0) {
+    let canvas = document.getElementById("paint");
+    let ctx = canvas.getContext("2d");
+    redoStack.push(undoStack.pop());
+    let restore = undoStack[undoStack.length - 1];
+    if (restore) ctx.putImageData(restore, 0, 0);
+  }
+});
 
 
 
