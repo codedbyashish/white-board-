@@ -10,6 +10,8 @@ let pen=document.getElementById("button-pen")
 let pensize=document.getElementById("pen-slidearea")
 let tooltype=document.getElementById("tool-type")
 let fontSelect = document.getElementById("font-select");
+let undoStack = [];
+let redoStack = [];
 
 fontSelect.addEventListener("change", () => {
     context.font = `${pensize.value}px ${fontSelect.value}`;
