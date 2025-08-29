@@ -140,6 +140,12 @@ toggleBtn.addEventListener("click", () => {
   localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
+function saveState() {
+  let canvas = document.getElementById("paint");
+  let ctx = canvas.getContext("2d");
+  undoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+}
+
 
 
 
