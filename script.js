@@ -156,6 +156,14 @@ document.getElementById("button-undo").addEventListener("click", () => {
   }
 });
 
+// redo button function 
+
+document.getElementById("button-redo").addEventListener("click", () => {
+  if (redoStack.length > 0) {
+    let canvas = document.getElementById("paint");
+    let ctx = canvas.getContext("2d");
+    let restore = redoStack.pop();
+
 
 
 
