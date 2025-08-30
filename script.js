@@ -127,12 +127,12 @@ darkModeBtn.addEventListener("click", () => {
         ? " 💡Light Mode" 
         : "🌙 Dark Mode";
 });
-
+// togglr button condition 
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
   toggleBtn.textContent = "Light Mode";
 }
-
+// even of toogle button
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   const isDark = document.body.classList.contains("dark");
