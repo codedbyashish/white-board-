@@ -170,7 +170,16 @@ document.getElementById("button-redo").addEventListener("click", () => {
   }
 });
 
+// draw function
 
+// ===== Draw function =====
+const draw = (e) => {
+    if (!draw_boolean) return; // agar pen dabaya nahi hai to kuch mat karo
+    getXy(e); // mouse/touch position nikalna
+
+    context.lineWidth = pensize.value || 2; // slider se size
+    context.lineCap = "round";
+    context.lineJoin = "round";
 
 
 
