@@ -181,6 +181,29 @@ const draw = (e) => {
     context.lineCap = "round";
     context.lineJoin = "round";
 
+    if (erase_boolean) {
+        // Eraser mode
+        context.globalCompositeOperation = "destination-out";
+        context.strokeStyle = "rgba(0,0,0,1)";
+    } else {
+        // Pen mode
+        context.globalCompositeOperation = "source-over";
+        context.strokeStyle = colourbutton.value || "black";
+    }
+
+    context.lineTo(mouseX, mouseY);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(mouseX, mouseY);
+};
+
+// ===== Bind events =====
+canvas.addEventListener("mousedown", stratdrawing);
+canvas.addEventListener("mousemove", draw);
+canvas.addEventListener("touchstart", stratdrawing, { passive: false });
+canvas.addEventListener("touchmove", draw, { passive: false });
+
+
 
 
 
