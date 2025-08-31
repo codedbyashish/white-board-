@@ -197,13 +197,15 @@ const draw = (e) => {
     context.moveTo(mouseX, mouseY);
 };
 
-// ===== Bind events =====
 canvas.addEventListener("mousedown", stratdrawing);
 canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("touchstart", stratdrawing, { passive: false });
 canvas.addEventListener("touchmove", draw, { passive: false });
 
-
+   context.lineTo(mouseX, mouseY);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(mouseX, mouseY);
 
 
 
