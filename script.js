@@ -243,6 +243,20 @@ canvas.addEventListener("mouseup", (e) => {
         context.lineWidth = pensize.value;
         context.strokeStyle = colourbutton.value;
 
+        if (shapeMode === "rect") {
+            context.strokeRect(startX, startY, w, h);
+        } else if (shapeMode === "circle") {
+            let r = Math.sqrt(w * w + h * h);
+            context.beginPath();
+            context.arc(startX, startY, r, 0, Math.PI * 2);
+            context.stroke();
+        }
+        draw_boolean = false;
+        saveState();
+    } else {
+        stopDrawing();
+    }
+});
 
 window.onload = init;
 
