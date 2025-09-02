@@ -219,6 +219,20 @@ document.getElementById("button-rect").addEventListener("click", () => {
 document.getElementById("button-circle").addEventListener("click", () => {
     shapeMode = "circle";
     tooltype.innerHTML = "Circle";
+});
+
+let startX, startY;
+
+canvas.addEventListener("mousedown", (e) => {
+    if (shapeMode) {
+        getXy(e);
+        startX = mouseX;
+        startY = mouseY;
+        draw_boolean = true;
+    } else {
+        stratdrawing(e);
+    }
+});
 
 window.onload = init;
 
