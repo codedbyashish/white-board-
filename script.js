@@ -234,6 +234,16 @@ canvas.addEventListener("mousedown", (e) => {
     }
 });
 
+canvas.addEventListener("mouseup", (e) => {
+    if (shapeMode && draw_boolean) {
+        getXy(e);
+        let w = mouseX - startX;
+        let h = mouseY - startY;
+
+        context.lineWidth = pensize.value;
+        context.strokeStyle = colourbutton.value;
+
+
 window.onload = init;
 
 
