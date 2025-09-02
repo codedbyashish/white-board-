@@ -209,6 +209,17 @@ canvas.addEventListener("touchmove", draw, { passive: false });
 
 
 
+    let shapeMode = null; // "line", "rect", "circle"
+
+// button events
+document.getElementById("button-rect").addEventListener("click", () => {
+    shapeMode = "rect";
+    tooltype.innerHTML = "Rectangle";
+});
+document.getElementById("button-circle").addEventListener("click", () => {
+    shapeMode = "circle";
+    tooltype.innerHTML = "Circle";
+
 window.onload = init;
 
 
