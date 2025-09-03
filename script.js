@@ -103,7 +103,7 @@ clearbutton.addEventListener("click", () => {
     saveState();
 });
 
-// ===== Dark Mode =====
+// dark mode function
 let darkModeBtn = document.getElementById("toggle-darkmode");
 
 if (localStorage.getItem("theme") === "dark") {
@@ -118,7 +118,7 @@ darkModeBtn.addEventListener("click", () => {
     localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
-// ===== Undo/Redo =====
+// undo and redo function
 function saveState() {
     undoStack.push(context.getImageData(0, 0, canvas.width, canvas.height));
     if (undoStack.length > 50) undoStack.shift(); // prevent memory overflow
@@ -163,7 +163,7 @@ const draw = (e) => {
     context.moveTo(mouseX, mouseY);
 };
 
-// ===== Events =====
+// events function
 canvas.addEventListener("mousedown", startDrawing);
 canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", stopDrawing);
