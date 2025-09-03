@@ -1,8 +1,7 @@
-// ===== Initial references =====
-let canvas = document.getElementById("paint");
-let context = canvas.getContext("2d"); // moved UP so context is available everywhere
 
-let colorsRef = document.getElementsByClassName("colors");
+let canvas = document.getElementById("paint");
+let context = canvas.getContext("2d");
+
 let backgroundbutton = document.getElementById("color-background");
 let colourbutton = document.getElementById("color");
 let clearbutton = document.getElementById("button-clear");
@@ -17,9 +16,8 @@ let redoStack = [];
 let textMode = false;
 let erase_boolean = false;
 let draw_boolean = false;
-let shapeMode = null; // "line", "rect", "circle"
 
-// ===== Font change =====
+
 fontSelect.addEventListener("change", () => {
     context.font = `${pensize.value}px ${fontSelect.value}`;
 });
@@ -39,7 +37,6 @@ canvas.addEventListener("click", (e) => {
     }
 });
 
-// ===== Mouse coordinates =====
 let mouseX = 0;
 let mouseY = 0;
 let rectLeft = canvas.getBoundingClientRect().left;
@@ -50,7 +47,7 @@ const getXy = (e) => {
     mouseY = (!touch() ? e.pageY : e.touches?.[0].pageY) - rectTOP;
 };
 
-// ===== Init =====
+
 const init = () => {
     context.strokeStyle = "black";
     context.lineWidth = 1;
@@ -61,11 +58,10 @@ const init = () => {
     tooltype.innerHTML = "Pen";
     canvas.style.backgroundColor = "#ffff";
     backgroundbutton.value = "#ffffff";
-    pen.innerText = context.strokeStyle;
     saveState();
 };
 
-// ===== Touch detection =====
+// touch detcting
 const touch = () => {
     try {
         document.createEvent("TouchEvent");
@@ -75,30 +71,30 @@ const touch = () => {
     }
 };
 
-// ===== Drawing control =====
+// control drawing
 const stopDrawing = () => {
     context.beginPath();
     draw_boolean = false;
 };
 
-const stratdrawing = (e) => {
+const startDrawing = (e) => {
     draw_boolean = true;
     getXy(e);
     context.beginPath();
     context.moveTo(mouseX, mouseY);
 };
 
-// ===== Pen & Eraser =====
+// pen and erser function evemt
 pen.addEventListener("click", () => {
     tooltype.innerHTML = "Pen";
     erase_boolean = false;
-    shapeMode = null;
+    textMode = false;
 });
 
 erasebutton.addEventListener("click", () => {
     erase_boolean = true;
     tooltype.innerHTML = "Eraser";
-    shapeMode = null;
+    textMode = false;
 });
 
 clearbutton.addEventListener("click", () => {
@@ -146,7 +142,7 @@ document.getElementById("button-redo").addEventListener("click", () => {
 
 // ===== Draw function =====
 const draw = (e) => {
-    if (!draw_boolean || shapeMode) return;
+    if (!draw_boolean) return;
     getXy(e);
 
     context.lineWidth = pensize.value || 2;
@@ -167,61 +163,13 @@ const draw = (e) => {
     context.moveTo(mouseX, mouseY);
 };
 
-// ===== Shape Tools =====
-document.getElementById("button-rect").addEventListener("click", () => {
-    shapeMode = "rect";
-    tooltype.innerHTML = "Rectangle";
-});
-
-document.getElementById("button-circle").addEventListener("click", () => {
-    shapeMode = "circle";
-    tooltype.innerHTML = "Circle";
-});
-
-let startX, startY;
-
-canvas.addEventListener("mousedown", (e) => {
-    if (shapeMode) {
-        getXy(e);
-        startX = mouseX;
-        startY = mouseY;
-        draw_boolean = true;
-    } else {
-        stratdrawing(e);
-    }
-});
-
-canvas.addEventListener("mouseup", (e) => {
-    if (shapeMode && draw_boolean) {
-        getXy(e);
-        let w = mouseX - startX;
-        let h = mouseY - startY;
-
-        context.lineWidth = pensize.value;
-        context.strokeStyle = colourbutton.value;
-
-        if (shapeMode === "rect") {
-            context.strokeRect(startX, startY, w, h);
-        } else if (shapeMode === "circle") {
-            let r = Math.sqrt(w * w + h * h);
-            context.beginPath();
-            context.arc(startX, startY, r, 0, Math.PI * 2);
-            context.stroke();
-        }
-        draw_boolean = false;
-        saveState();
-    } else {
-        stopDrawing();
-    }
-});
-
 // ===== Events =====
-canvas.addEventListener("mousedown", stratdrawing);
+canvas.addEventListener("mousedown", startDrawing);
 canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", stopDrawing);
 canvas.addEventListener("mouseleave", stopDrawing);
 
-canvas.addEventListener("touchstart", stratdrawing, { passive: false });
+canvas.addEventListener("touchstart", startDrawing, { passive: false });
 canvas.addEventListener("touchmove", draw, { passive: false });
 canvas.addEventListener("touchend", stopDrawing);
 
