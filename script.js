@@ -175,5 +175,19 @@ canvas.addEventListener("touchstart", startDrawing, { passive: false });
 canvas.addEventListener("touchmove", draw, { passive: false });
 canvas.addEventListener("touchend", stopDrawing);
 
+// mobile touch detection
+canvas.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    startDrawing(e);
+}, { passive: false });
+
+canvas.addEventListener("touchmove", (e) => {
+    e.preventDefault();
+    draw(e);
+}, { passive: false });
+
+canvas.addEventListener("touchend", stopDrawing);
+
+
 // ===== On Load =====
 window.onload = init;
