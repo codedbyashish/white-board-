@@ -121,7 +121,15 @@ function setDarkMode(isDark) {
     localStorage.setItem("theme", isDark ? "dark" : "light");
 }
 
+// Check for the user's saved preference on load
+const savedTheme = localStorage.getItem("theme");
+const isSystemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+if (savedTheme === "dark" || (savedTheme === null && isSystemDark)) {
+    setDarkMode(true);
+} else {
+    setDarkMode(false);
+}
 
 // undo and redo function
 function saveState() {
