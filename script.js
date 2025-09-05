@@ -112,7 +112,16 @@ function setDarkMode(isDark) {
         darkModeBtn.textContent = "Light Mode";
         canvas.style.backgroundColor = "#121212"; 
         backgroundbutton.value = "#121212"; 
+    } else {
+        darkModeBtn.textContent = "🌙 Dark Mode";
+        canvas.style.backgroundColor = "#ffffff"; 
+        backgroundbutton.value = "#ffffff"; 
     }
+    // save the theme to local storage
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+
+
 
 // undo and redo function
 function saveState() {
