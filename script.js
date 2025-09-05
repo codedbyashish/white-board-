@@ -131,6 +131,12 @@ if (savedTheme === "dark" || (savedTheme === null && isSystemDark)) {
     setDarkMode(false);
 }
 
+// Add event listener to the button
+darkModeBtn.addEventListener("click", () => {
+    const isDark = document.body.classList.contains("dark");
+    setDarkMode(!isDark);
+});
+
 // undo and redo function
 function saveState() {
     undoStack.push(context.getImageData(0, 0, canvas.width, canvas.height));
