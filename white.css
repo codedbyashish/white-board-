@@ -126,9 +126,9 @@ input[type="color"]::-moz-color-swatch {
 /* mobile screen */
 @media screen and (max-width: 768px) {
 
-  /* paint area mobile ke liye full screen */
+
   #paintarea {
-    height: 60vh;
+    height: 82vh;
     width: 100%;
     border: 5px solid #1a1a40;
   }
@@ -138,9 +138,27 @@ input[type="color"]::-moz-color-swatch {
     padding: 15px;
   }
 
-  /* tool row ko 2 column kar diya */
+  
   .tool-row {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-bottom: 20px;
+  }
+  .tool-row {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .tool-row button {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+
+  
+  #font-select {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
   }
