@@ -123,4 +123,24 @@ input[type="color"]::-moz-color-swatch {
   transform: translateY(-2px);
 }
 
+/* mobile screen */
+@media screen and (max-width: 768px) {
 
+  /* paint area mobile ke liye full screen */
+  #paintarea {
+    height: 60vh;
+    width: 100%;
+    border: 5px solid #1a1a40;
+  }
+
+  .options {
+    height: auto;
+    padding: 15px;
+  }
+
+  /* tool row ko 2 column kar diya */
+  .tool-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
