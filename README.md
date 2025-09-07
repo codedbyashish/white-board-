@@ -30,3 +30,30 @@ Drawing Example 🖊️
 Color Picker 🎨
 
 <img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/023a64f6-c9f8-4fb4-a879-d838f5b7a76c" />
+
+
+✨ Features
+
+🖊️ Pen tool — draw freehand on the canvas.
+
+🎛️ Pen size slider — change stroke thickness with a range input.
+
+🎨 Color picker — open color palette to pick any color for pen.
+
+🧽 Eraser — switch to eraser mode to remove strokes.
+
+⤴️ Undo — undo the last drawing action.
+
+⤵️ Redo — redo an undone action.
+
+🧹 Clear — clear the entire canvas.
+
+✍️ Text mode — add editable text to the canvas, with font selection.
+
+🖼️ Background color — change the canvas background color.
+
+🌗 Dark / Light Mode toggle — whole UI switches theme.
+
+🖱️ Mouse & Touch support — works with mouse; touch listeners added for touchstart/touchmove/touchend (basic support).
+
+🔁 Responsive layout — UI adapts to wide screens; control panel fixed at bottom.
