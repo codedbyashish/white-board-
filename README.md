@@ -76,3 +76,12 @@ A full-width <canvas> element inside a container.
 Bottom control panel with labeled controls: pen size, color button/input, undo/redo/clear buttons, pen/erase/text toggles, font <select>, and a background color control.
 
 A toggle button for dark/light mode placed at the top-right.
+
+
+CSS
+
+Dark theme uses deep navy/dark purple background for the control panel and borders.
+
+Rounded buttons, pill-shaped controls, and subtle shadows for a modern look.
+
+Responsive spacing so the toolbar stays usable on wide screens.
