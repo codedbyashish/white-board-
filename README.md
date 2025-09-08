@@ -57,3 +57,22 @@ Color Picker 🎨
 🖱️ Mouse & Touch support — works with mouse; touch listeners added for touchstart/touchmove/touchend (basic support).
 
 🔁 Responsive layout — UI adapts to wide screens; control panel fixed at bottom.
+
+
+🗂️ Project Structure
+
+canvas-drawing-app/
+├─ index.html # main HTML file
+├─ styles.css # all app styles (light/dark themes + layout)
+├─ script.js # canvas logic, drawing, undo/redo, color picker hooks
+├─ screenshots/ # UI screenshots
+└─ README.md # this file
+
+🛠️ Implementation Details
+HTML
+
+A full-width <canvas> element inside a container.
+
+Bottom control panel with labeled controls: pen size, color button/input, undo/redo/clear buttons, pen/erase/text toggles, font <select>, and a background color control.
+
+A toggle button for dark/light mode placed at the top-right.
