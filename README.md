@@ -85,3 +85,20 @@ Dark theme uses deep navy/dark purple background for the control panel and borde
 Rounded buttons, pill-shaped controls, and subtle shadows for a modern look.
 
 Responsive spacing so the toolbar stays usable on wide screens.
+
+
+JavaScript
+
+Setup canvas with canvas.width/canvas.height sized to the viewport or container and handle window resize.
+
+Mouse events: mousedown, mousemove, mouseup, mouseout to draw strokes.
+
+Touch events: touchstart, touchmove, touchend with e.preventDefault() for smooth drawing on touch devices.
+
+Stroke drawing uses ctx.beginPath(), ctx.moveTo(), ctx.lineTo() and ctx.strokeStyle / ctx.lineWidth.
+
+Undo/Redo implemented by saving canvas snapshots (toDataURL() or getImageData) into stacks.
+
+Color picker uses native <input type="color"> or a custom color palette popup.
+
+Text insertion: draw text on canvas using ctx.fillText() at click coordinates; optionally support an overlay input for editable text.
