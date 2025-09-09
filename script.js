@@ -26,7 +26,7 @@ document.getElementById("button-text").addEventListener("click", () => {
     textMode = true;
     tooltype.innerHTML = "Text";
 });
-
+// text function 
 canvas.addEventListener("click", (e) => {
     if (textMode) {
         let text = prompt("Enter your text:");
@@ -46,6 +46,7 @@ const getXy = (e) => {
     mouseX = (!touch() ? e.pageX : e.touches?.[0].pageX) - rectLeft;
     mouseY = (!touch() ? e.pageY : e.touches?.[0].pageY) - rectTOP;
 };
+// init function 
 
 
 const init = () => {
