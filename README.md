@@ -78,6 +78,12 @@ Bottom control panel with labeled controls: pen size, color button/input, undo/r
 A toggle button for dark/light mode placed at the top-right.
 
 
+
+
+
+
+
+
 CSS
 
 Dark theme uses deep navy/dark purple background for the control panel and borders.
@@ -85,6 +91,13 @@ Dark theme uses deep navy/dark purple background for the control panel and borde
 Rounded buttons, pill-shaped controls, and subtle shadows for a modern look.
 
 Responsive spacing so the toolbar stays usable on wide screens.
+
+
+
+
+
+
+
 
 
 JavaScript
