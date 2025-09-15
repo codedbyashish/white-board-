@@ -143,7 +143,7 @@ function saveState() {
     undoStack.push(context.getImageData(0, 0, canvas.width, canvas.height));
     if (undoStack.length > 50) undoStack.shift(); // prevent memory overflow
 }
-
+// undo button function
 document.getElementById("button-undo").addEventListener("click", () => {
     if (undoStack.length > 1) {
         redoStack.push(undoStack.pop());
@@ -151,7 +151,7 @@ document.getElementById("button-undo").addEventListener("click", () => {
         context.putImageData(restore, 0, 0);
     }
 });
-
+// redo button function
 document.getElementById("button-redo").addEventListener("click", () => {
     if (redoStack.length > 0) {
         let restore = redoStack.pop();
@@ -160,7 +160,7 @@ document.getElementById("button-redo").addEventListener("click", () => {
     }
 });
 
-// ===== Draw function =====
+// mobile function 
 const draw = (e) => {
     if (!draw_boolean) return;
     getXy(e);
