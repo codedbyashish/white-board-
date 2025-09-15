@@ -164,11 +164,11 @@ document.getElementById("button-redo").addEventListener("click", () => {
 const draw = (e) => {
     if (!draw_boolean) return;
     getXy(e);
-
+// pen size
     context.lineWidth = pensize.value || 2;
     context.lineCap = "round";
     context.lineJoin = "round";
-
+// erase function 
     if (erase_boolean) {
         context.globalCompositeOperation = "destination-out";
         context.strokeStyle = "rgba(0,0,0,1)";
