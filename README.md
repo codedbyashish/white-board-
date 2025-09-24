@@ -2,7 +2,7 @@ Canvas Drawing App 🎨🖌️
 
 A simple, modern whiteboard/canvas web app built with HTML, CSS, and JavaScript. Designed for drawing, sketching, and quick notes — includes a control panel with pen settings, color pickers, background controls, text insertion, and a dark mode. Screenshots provided by the project owner were used as reference.
 
-🚀 Demo / Overview
+  Overview
 
 This app provides a large drawing surface and a bottom control panel with tools and options. It supports mouse and (partially) touch interactions for drawing freehand strokes.
 
